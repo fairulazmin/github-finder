@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 function Navbar({ title }) {
   return (
@@ -10,6 +11,14 @@ function Navbar({ title }) {
           <FaGithub />
           {title}
         </h1>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
       </nav>
     </IconContext.Provider>
   );

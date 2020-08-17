@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function UserItems({ user: { avatar_url, login, html_url } }) {
   return (
@@ -8,9 +9,9 @@ function UserItems({ user: { avatar_url, login, html_url } }) {
         <img src={avatar_url} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{login}</h5>
-          <a href={html_url} className="btn btn-primary">
+          <Link to={`/user/${login}`} className="btn btn-primary">
             More
-          </a>
+          </Link>
         </div>
       </div>
     </div>
