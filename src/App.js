@@ -80,7 +80,7 @@ class App extends React.Component {
   getUser = async (username) => {
     this.setState({ loading: true });
     const res = await axios.get(
-      `https://api.github.com/search/users/${username}?`,
+      `https://api.github.com/users/${username}?`,
       {
         headers: {
           Authorization: `token ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`,
